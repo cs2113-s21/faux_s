@@ -7,7 +7,9 @@ You're going to use `faux_s` as a test-bed to understand
 2. the trade-off between byte-by-byte reading of data, and DMA.
 
 It emulates two devices, a boop generator, and a meme generator.
+
 ![](./boop.png)
+
 Two subsequent days of exercises will use `faux_s` to investigate these two issues.
 
 Simple `make` comments include:
