@@ -1,3 +1,9 @@
+/*
+ * BSD 3-Clause License
+ * Copyright (c) 2020, Gabriel Parmer, gparmer@gwu.edu
+ * All rights reserved.
+ */
+
 /**
  * These variables control if we use the boop device, or the meme
  * device, and if we use register I/O, or interrupt I/O. The mode

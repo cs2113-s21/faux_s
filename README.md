@@ -1,22 +1,16 @@
-# Polling, Interrupts, and DMA
+# `faux_s`: a Fake Kernel with Just Enough Emulation
 
 Welcome to `faux_s` (pronounced "OS") which is a fake OS running on Linux.
-You're going to use `faux_s` as a test-bed to understand
-
-1. the trade-offs between polling and interrupts, and
-2. the trade-off between byte-by-byte reading of data, and DMA.
-
-It emulates two devices, a boop generator, and a meme generator.
-
-![](./boop.png)
-
-Two subsequent days of exercises will use `faux_s` to investigate these two issues.
+`faux_s` is an OS emulation environment focused on in-class exercises used in GWU's [undergraduate OS class](https://www2.seas.gwu.edu/~gparmer/classes/2020-08-01-Operating-Systems.html) by [Gabe](https://www2.seas.gwu.edu/~gparmer/).
+The code is pretty straightforward; the usefulness of this in how it emphasizes core OS concepts.
+I would *not* recommend using it as a replacement for actual assignments.
 
 Simple `make` comments include:
 
 - `make` to build everything
 - `make build` ditto
 - `make clean` to remove all generated files
+- `make doc` to generate the .pdf from this readme.
 
 ## `faux_s` Design
 
@@ -40,7 +34,20 @@ The different *modes* of execution for the code can be toggled in the `#define`s
 
 You should read through `main.c` to get the gist of most of it.
 
-## Exercises: Polling vs. Interrupts
+# Exercises
+
+We use `faux_s` as a test-bed to understand
+
+1. the trade-offs between polling and interrupts, and
+2. the trade-off between byte-by-byte reading of data, and DMA.
+
+It emulates two devices, a boop generator, and a meme generator.
+
+![](./boop.png)
+
+We'll use `faux_s` to investigate these issues.
+
+## Polling vs. Interrupts
 
 You're going to run the code in two configurations:
 
@@ -66,7 +73,7 @@ Please answer the following questions:
 	What is happening here?
 	What solutions do you foresee?
 
-## Exercises: DMA
+## DMA
 
 Now lets hack in some DMA!
 

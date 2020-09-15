@@ -1,6 +1,16 @@
+/*
+ * BSD 3-Clause License
+ * Copyright (c) 2020, Gabriel Parmer, gparmer@gwu.edu
+ * All rights reserved.
+ */
+
 /**
- * Faux S (pronounced "O S") is a Linux-based emulator of devices and
- * device interactions.
+ * Faux S (pronounced "OS") is a Linux-based emulator of devices and
+ * device interactions. This is its core API. It includes:
+ *
+ * - an interrupt controller
+ * - devices: boop and meme
+ * - device controller (register-based) device access & DMA
  */
 
 #ifndef FAUX_S_H

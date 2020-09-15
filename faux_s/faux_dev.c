@@ -1,3 +1,9 @@
+/*
+ * BSD 3-Clause License
+ * Copyright (c) 2020, Gabriel Parmer, gparmer@gwu.edu
+ * All rights reserved.
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>

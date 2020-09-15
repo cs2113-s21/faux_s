@@ -44,5 +44,8 @@ diff:
 	@git status
 	@git diff --stat
 
+doc: README.md
+	pandoc README.md -o readme.pdf
+
 # include the dependencies
 -include $(DEPFILES)
