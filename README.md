@@ -61,17 +61,24 @@ You should be able to get by mostly only knowing the code in `main.c`.
 Please answer the following questions:
 
 - **Q1:** What happens when you run the system using polling?
+___O___O___P___B___O___O___P ...
+Keeps checking byte by byte + waiting
 - **Q2:** What happens when you run the system using interrupts?
+___________________O__________________O__________________p_________________B___________________O___________________O__________________P ... 
+System doesn't have to keep listening and just continues doing whatever. when a device wants to give a boop, it'll interupt 
 - **Q3:** How can you explain the difference?
 	Please be specific.
+**_Polling will wait while interupts don't need a while loop to wait_**
 - **Q4:** A famous google interview question: How can you tell by which way a stack grows in C on your architecture?
 	Brainstorm this as a group and test it out.
 	Use what you learned from that exercise to figure out which stack the interrupt handler `dev_isr` is executing on.
 	Explain what you think is happening, and how that is possible?
 	In other words: how are stacks used with signals in Linux?
+**_you can keep adding variables to your program and check the addresses_**
 - **Q5:** Use the meme device both modes.
 	What is happening here?
 	What solutions do you foresee?
+**_when you run both, you get the boops interspersed with the memes. no buffering of printouts_**
 
 ## DMA
 
@@ -80,9 +87,11 @@ Now lets hack in some DMA!
 - **Q1:** Only the meme device provides DMA.
 	Why?
 	Why does DMA make more sense for the meme device?
+**_bc a DMA is better for larger data and a meme is larger (don't want to rid it bit by bit but store it instead)_**
 - **Q2:** Not so much a question as a puzzle:
 	Implement the `main.c` code to use the DMA features of the meme device!
 	Note that there is a lot of documentation of the DMA functions.
+
 - **Q3:** Why does DMA have such an impact here?
 	The constant `WORK_AMNT` in `faux_dev.c` changes the simulated latency of the interconnect used to "talk" to the device.
 	How does changing `WORK_AMNT` impact the effectiveness of DMA?
