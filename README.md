@@ -96,6 +96,8 @@ Now lets hack in some DMA!
 	The constant `WORK_AMNT` in `faux_dev.c` changes the simulated latency of the interconnect used to "talk" to the device.
 	How does changing `WORK_AMNT` impact the effectiveness of DMA?
 	What does this mean for non-simulated systems?
+**_if theres a larger amount of work --> DMA bc separate system that takes less time for work to be done
+but if there's not much work --> less efficient to use DMA ( like for a keyboard )_**
 - **Q4:** Does your implementation pass `valgrind`^[Note, you might need to `apt-get install valgrind`]?
 	Valgrind is a tool that helps you debug your C.
 	It detects errors in using `malloc` and `free`; double freeing a piece of memory? not freeing memory?
